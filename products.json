@@ -1,181 +1,182 @@
 {
- "_note": "Maintained by CHINTU's Website manager. List an EA as available only after the owner approves its release.",
- "products": [
-  {
-   "version": "3.00",
-   "instruments": [
-    "BTCUSD"
-   ],
-   "timeframes": [
-    "M1 (default)"
-   ],
-   "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
-   "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
-   "last_reviewed": "2026-11-11",
-   "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
-   "features": [
-    "Supertrend flip entry",
-    "EMA 9 breakout exit",
-    "Supertrend flip exit",
-    "Stop loss on every trade",
-    "ADX filter",
-    "On-chart control panel",
-    "Flip sound alert",
-    "Trade journal (CSV)",
-    "Own magic number"
-   ],
-   "results": [],
-   "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
-   "versions": [
+  "_note": "Maintained by CHINTU's Website manager. List an EA as available only after the owner approves its release.",
+  "products": [
     {
-     "version": "3.00",
-     "date": "2026-11-11",
-     "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
-    }
-   ],
-   "known_issues": [
-    "Stop and target distances are in $ of BTC price - built for BTCUSD only."
-   ],
-   "id": "rdw-ea-free",
-   "name": "RDW Supertrend EA - Free",
-   "price_inr": "0",
-   "licence": "Free · 1 MT5 account",
-   "summary": "Try the full strategy free: Supertrend flip entries and disciplined exits on BTCUSD, with safe settings locked in.",
-   "includes": [
-    "EA file (.ex5)",
-    "Up to 10 trades per day",
-    "Risk fixed at 2% per trade",
-    "Fixed SL $300 / Target $500 and ADX 20-30 filter",
-    "Installation guide"
-   ],
-   "how_to_use": [
-    "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
-    "Attach to a BTCUSD M1 chart and enable Algo Trading.",
-    "Settings are locked in the Free edition - just watch it follow the rules.",
-    "Run on a demo account first."
-   ],
-   "brochure": "brochure.html?id=rdw-ea-free",
-   "status": "available"
-  },
-  {
-   "version": "3.00",
-   "instruments": [
-    "BTCUSD"
-   ],
-   "timeframes": [
-    "M1 (default)"
-   ],
-   "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
-   "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
-   "last_reviewed": "2026-11-11",
-   "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
-   "features": [
-    "Supertrend flip entry",
-    "EMA 9 breakout exit",
-    "Supertrend flip exit",
-    "Stop loss on every trade",
-    "ADX filter",
-    "On-chart control panel",
-    "Flip sound alert",
-    "Trade journal (CSV)",
-    "Own magic number"
-   ],
-   "results": [],
-   "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
-   "versions": [
+      "version": "3.00",
+      "instruments": [
+        "BTCUSD"
+      ],
+      "timeframes": [
+        "M1 (default)"
+      ],
+      "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
+      "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
+      "last_reviewed": "2026-11-11",
+      "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
+      "features": [
+        "Supertrend flip entry",
+        "EMA 9 breakout exit",
+        "Supertrend flip exit",
+        "Stop loss on every trade",
+        "ADX filter",
+        "On-chart control panel",
+        "Flip sound alert",
+        "Trade journal (CSV)",
+        "Own magic number"
+      ],
+      "results": [],
+      "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
+      "versions": [
+        {
+          "version": "3.00",
+          "date": "2026-11-11",
+          "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
+        }
+      ],
+      "known_issues": [
+        "Stop and target distances are in $ of BTC price - built for BTCUSD only."
+      ],
+      "id": "rdw-ea-free",
+      "name": "RDW Supertrend EA - Free",
+      "price_inr": "0",
+      "licence": "Free · 1 MT5 account",
+      "summary": "Try the full strategy free: Supertrend flip entries and disciplined exits on BTCUSD, with safe settings locked in.",
+      "includes": [
+        "EA file (.ex5)",
+        "Up to 10 trades per day",
+        "Risk fixed at 2% per trade",
+        "Fixed SL $300 / Target $500 and ADX 20-30 filter",
+        "Installation guide"
+      ],
+      "how_to_use": [
+        "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
+        "Attach to a BTCUSD M1 chart and enable Algo Trading.",
+        "Settings are locked in the Free edition - just watch it follow the rules.",
+        "Run on a demo account first."
+      ],
+      "brochure": "brochure.html?id=rdw-ea-free",
+      "status": "available",
+      "download_url": "RawDigitalWorks_EA_FREE.ex5"
+    },
     {
-     "version": "3.00",
-     "date": "2026-11-11",
-     "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
-    }
-   ],
-   "known_issues": [
-    "Stop and target distances are in $ of BTC price - built for BTCUSD only."
-   ],
-   "id": "rdw-ea-standard",
-   "name": "RDW Supertrend EA - Standard",
-   "price_inr": "499",
-   "licence": "One-time · 1 MT5 account",
-   "summary": "Unlock your own settings: lot size, risk, stop loss and target - up to 50 trades per day.",
-   "includes": [
-    "EA file (.ex5)",
-    "Up to 50 trades per day",
-    "Editable risk (capped at 10%), SL and target",
-    "ADX 20-30 filter locked on",
-    "Installation guide",
-    "Updates for version 3"
-   ],
-   "how_to_use": [
-    "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
-    "Attach to a BTCUSD M1 chart and enable Algo Trading.",
-    "Set RiskPercent to 1% or less before running.",
-    "Run on a demo account first."
-   ],
-   "brochure": "brochure.html?id=rdw-ea-standard",
-   "status": "available",
-   "mrp_inr": "999",
-   "offer": "Limited time offer",
-   "razorpay_url": "https://rzp.io/rzp/rdw-ea-standard"
-  },
-  {
-   "version": "3.00",
-   "instruments": [
-    "BTCUSD"
-   ],
-   "timeframes": [
-    "M1 (default)"
-   ],
-   "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
-   "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
-   "last_reviewed": "2026-11-11",
-   "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
-   "features": [
-    "Supertrend flip entry",
-    "EMA 9 breakout exit",
-    "Supertrend flip exit",
-    "Stop loss on every trade",
-    "ADX filter",
-    "On-chart control panel",
-    "Flip sound alert",
-    "Trade journal (CSV)",
-    "Own magic number"
-   ],
-   "results": [],
-   "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
-   "versions": [
+      "version": "3.00",
+      "instruments": [
+        "BTCUSD"
+      ],
+      "timeframes": [
+        "M1 (default)"
+      ],
+      "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
+      "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
+      "last_reviewed": "2026-11-11",
+      "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
+      "features": [
+        "Supertrend flip entry",
+        "EMA 9 breakout exit",
+        "Supertrend flip exit",
+        "Stop loss on every trade",
+        "ADX filter",
+        "On-chart control panel",
+        "Flip sound alert",
+        "Trade journal (CSV)",
+        "Own magic number"
+      ],
+      "results": [],
+      "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
+      "versions": [
+        {
+          "version": "3.00",
+          "date": "2026-11-11",
+          "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
+        }
+      ],
+      "known_issues": [
+        "Stop and target distances are in $ of BTC price - built for BTCUSD only."
+      ],
+      "id": "rdw-ea-standard",
+      "name": "RDW Supertrend EA - Standard",
+      "price_inr": "499",
+      "licence": "One-time · 1 MT5 account",
+      "summary": "Unlock your own settings: lot size, risk, stop loss and target - up to 50 trades per day.",
+      "includes": [
+        "EA file (.ex5)",
+        "Up to 50 trades per day",
+        "Editable risk (capped at 10%), SL and target",
+        "ADX 20-30 filter locked on",
+        "Installation guide",
+        "Updates for version 3"
+      ],
+      "how_to_use": [
+        "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
+        "Attach to a BTCUSD M1 chart and enable Algo Trading.",
+        "Set RiskPercent to 1% or less before running.",
+        "Run on a demo account first."
+      ],
+      "brochure": "brochure.html?id=rdw-ea-standard",
+      "status": "available",
+      "mrp_inr": "999",
+      "offer": "Limited time offer",
+      "razorpay_url": "https://rzp.io/rzp/rdw-ea-standard"
+    },
     {
-     "version": "3.00",
-     "date": "2026-11-11",
-     "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
+      "version": "3.00",
+      "instruments": [
+        "BTCUSD"
+      ],
+      "timeframes": [
+        "M1 (default)"
+      ],
+      "broker_conditions": "Any MT5 broker offering BTCUSD; developed on Exness-style pricing (raw spread + commission)",
+      "intended_use": "Rule-based trading on BTCUSD; start on a demo account",
+      "last_reviewed": "2026-11-11",
+      "description": "Enters on a Supertrend flip: a stop entry at the break of the flip candle's high (BUY) or low (SELL), cancelled if the trend flips back first. Exits when a candle closes through the EMA 9 against the trade and price breaks that candle (only once the trade is beyond entry), on a Supertrend flip against the trade, or at the stop loss. ADX filter keeps it out of dead and over-extended markets. Every rule is fixed in code - no emotions, no revenge trades, no hesitation.",
+      "features": [
+        "Supertrend flip entry",
+        "EMA 9 breakout exit",
+        "Supertrend flip exit",
+        "Stop loss on every trade",
+        "ADX filter",
+        "On-chart control panel",
+        "Flip sound alert",
+        "Trade journal (CSV)",
+        "Own magic number"
+      ],
+      "results": [],
+      "risk": "No verified backtest, out-of-sample or demo results are published yet - they will be added here after validation. BTCUSD on M1 is very volatile; spread, commission and slippage can make results much worse than any replay. Use a small risk (1% or less per trade) and a demo account first.",
+      "versions": [
+        {
+          "version": "3.00",
+          "date": "2026-11-11",
+          "notes": "Raw Digital Works editions (Free / Standard / Unlimited). Supertrend flip entry, EMA 9 breakout exit, Supertrend flip exit."
+        }
+      ],
+      "known_issues": [
+        "Stop and target distances are in $ of BTC price - built for BTCUSD only."
+      ],
+      "id": "rdw-ea-unlimited",
+      "name": "RDW Supertrend EA - Unlimited",
+      "price_inr": "799",
+      "licence": "One-time · 1 MT5 account",
+      "summary": "Everything unlocked: unlimited trades per day and every setting under your control, including the ADX filter.",
+      "includes": [
+        "EA file (.ex5)",
+        "Unlimited trades per day",
+        "Every setting editable (risk capped at 50%)",
+        "ADX filter and trades-per-switch editable",
+        "Installation guide",
+        "Updates for version 3"
+      ],
+      "how_to_use": [
+        "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
+        "Attach to a BTCUSD M1 chart and enable Algo Trading.",
+        "Set RiskPercent to 1% or less before running.",
+        "Run on a demo account first."
+      ],
+      "brochure": "brochure.html?id=rdw-ea-unlimited",
+      "status": "available",
+      "mrp_inr": "2999",
+      "offer": "Limited time offer",
+      "razorpay_url": "https://rzp.io/rzp/rdw-ea-unlimited"
     }
-   ],
-   "known_issues": [
-    "Stop and target distances are in $ of BTC price - built for BTCUSD only."
-   ],
-   "id": "rdw-ea-unlimited",
-   "name": "RDW Supertrend EA - Unlimited",
-   "price_inr": "799",
-   "licence": "One-time · 1 MT5 account",
-   "summary": "Everything unlocked: unlimited trades per day and every setting under your control, including the ADX filter.",
-   "includes": [
-    "EA file (.ex5)",
-    "Unlimited trades per day",
-    "Every setting editable (risk capped at 50%)",
-    "ADX filter and trades-per-switch editable",
-    "Installation guide",
-    "Updates for version 3"
-   ],
-   "how_to_use": [
-    "Install in MetaTrader 5: File → Open Data Folder → MQL5 → Experts.",
-    "Attach to a BTCUSD M1 chart and enable Algo Trading.",
-    "Set RiskPercent to 1% or less before running.",
-    "Run on a demo account first."
-   ],
-   "brochure": "brochure.html?id=rdw-ea-unlimited",
-   "status": "available",
-   "mrp_inr": "2999",
-   "offer": "Limited time offer",
-   "razorpay_url": "https://rzp.io/rzp/rdw-ea-unlimited"
-  }
- ]
+  ]
 }
