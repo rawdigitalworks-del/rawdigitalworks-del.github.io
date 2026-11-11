@@ -114,7 +114,8 @@
    "brochure": "brochure.html?id=rdw-ea-standard",
    "status": "available",
    "mrp_inr": "999",
-   "offer": "Limited time offer"
+   "offer": "Limited time offer",
+   "razorpay_url": "https://rzp.io/rzp/rdw-ea-standard"
   },
   {
    "version": "3.00",
@@ -173,7 +174,8 @@
    "brochure": "brochure.html?id=rdw-ea-unlimited",
    "status": "available",
    "mrp_inr": "2999",
-   "offer": "Limited time offer"
+   "offer": "Limited time offer",
+   "razorpay_url": "https://rzp.io/rzp/rdw-ea-unlimited"
   }
  ]
 }
