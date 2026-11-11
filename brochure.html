@@ -1,0 +1,59 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brochure — RAW DIGITAL WORKS</title><meta name="description" content="RDW Supertrend EA brochure: Free, Standard and Unlimited editions."><link rel="stylesheet" href="site.css">
+<link rel="icon" href="logo-96.jpg"><meta property="og:image" content="logo.jpg">
+<style>
+.bro{max-width:900px;margin:0 auto;padding:40px 22px 60px}
+.bro .head{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.bro .head img{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.bro .head b{display:block;letter-spacing:.12em;font-size:13px;color:var(--muted)}
+.bro h1{font-size:clamp(30px,4.4vw,46px);line-height:1.1;margin:6px 0 10px}
+.bro .tagline{font-size:19px;letter-spacing:0;color:var(--muted);margin:0 0 26px}
+.bro .pricebig{font-size:40px;font-weight:800;color:var(--gold)}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}
+.vs div{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.vs h3{margin:0 0 8px;font-size:16px}.vs ul{margin:0;padding-left:18px;color:var(--muted)}
+.vs .bad h3{color:var(--red)}.vs .good h3{color:var(--gold)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:18px 0}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 52px;margin-bottom:8px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:16px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:#000;font-weight:800;font-size:13px;display:grid;place-items:center}
+table.cmp{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px}
+table.cmp th,table.cmp td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:center}
+table.cmp th:first-child,table.cmp td:first-child{text-align:left;color:var(--muted)}
+table.cmp th.on,table.cmp td.on{background:rgba(246,190,40,.08);color:var(--text)}
+.bro .act{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+.bro .fine{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:28px}
+@media print{header.top,footer,.act{display:none!important}body{background:#fff;color:#111}.vs div,.steps li{background:#f6f7f8;border-color:#ddd}
+ .bro .tagline,.vs ul,.bro .fine,table.cmp td:first-child{color:#444}.bro .pricebig{color:#b07c00}.bro{padding:10px}@page{size:A4;margin:12mm}}
+@media(max-width:640px){.vs{grid-template-columns:1fr}}
+</style></head>
+<body><header class="top" id="top"></header><main><div class="bro" id="b"></div></main><footer id="foot"></footer>
+<script src="site.js"></script>
+<script>
+(async()=>{
+ const all=await products();const id=new URLSearchParams(location.search).get('id');const p=all.find(x=>x.id===id)||all[0];const el=document.getElementById('b');
+ if(!p){el.innerHTML='<p>Brochure not found. <a href="eas.html">See all Expert Advisors</a></p>';return;}
+ document.title=p.name+' — Brochure';
+ const eds=all.filter(x=>x.id.startsWith('rdw-ea-'));
+ const rows=[['Price',x=>money(x)],['Trades per day',x=>x.id.endsWith('free')?'10':x.id.endsWith('standard')?'50':'Unlimited'],
+  ['Risk per trade',x=>x.id.endsWith('free')?'Fixed 2%':x.id.endsWith('standard')?'Your choice, up to 10%':'Your choice, up to 50%'],
+  ['Edit lot, SL and target',x=>x.id.endsWith('free')?'Locked (SL $300 / target $500)':'Yes'],
+  ['ADX filter',x=>x.id.endsWith('unlimited')?'Editable':'Locked 20–30'],['Strategy and exits',()=>'Full'],['Licence',x=>esc(x.licence||'')]];
+ const cmp=eds.length>1?`<h2>Compare editions</h2><table class="cmp"><tr><th></th>${eds.map(x=>`<th class="${x.id===p.id?'on':''}">${esc(x.name.split(' - ')[1]||x.name)}</th>`).join('')}</tr>
+  ${rows.map(([k,f])=>`<tr><td>${k}</td>${eds.map(x=>`<td class="${x.id===p.id?'on':''}">${f(x)}</td>`).join('')}</tr>`).join('')}</table>`:'';
+ el.innerHTML=`<div class="head"><img src="logo-96.jpg" alt=""><div><b>RAW DIGITAL WORKS</b>MetaTrader 5 Expert Advisor · v${esc(p.version)}</div></div>
+ <span class="eyebrow">Brochure</span><h1>${esc(p.name)}</h1><p class="tagline">Your emotions trade the story. This EA trades the rules.</p>
+ <div class="pricebig">${money(p)} <small style="font-size:15px;color:var(--muted);font-weight:500">${esc(p.licence||'')}</small></div>
+ <p>${esc(p.summary)}</p>
+ <div class="vs"><div class="bad"><h3>Trading on emotion</h3><ul><li>Fear: closing winners too early</li><li>Greed: holding losers, adding size</li><li>Hesitation: missing the entry</li><li>Revenge: forcing the next trade</li></ul></div>
+ <div class="good"><h3>Trading on rules</h3><ul><li>Enters only on a confirmed Supertrend flip</li><li>Exits on fixed EMA 9 and flip rules</li><li>Stop loss on every trade</li><li>Same decision every time, 24/7</li></ul></div></div>
+ <h2>How it trades</h2><ol class="steps"><li><b>Trend flip.</b> The Supertrend changes colour on ${esc((p.instruments||[]).join(', '))}.</li>
+ <li><b>Confirmed entry.</b> A stop entry waits at the flip candle's high (BUY) or low (SELL). If the trend flips back first, it cancels.</li>
+ <li><b>Filtered.</b> The ADX filter skips dead and over-stretched markets.</li>
+ <li><b>Disciplined exit.</b> EMA 9 breakout exit once in profit, an exit on a flip against the trade, and a stop loss at all times.</li></ol>
+ ${cmp}
+ <h2>What you get</h2><ul>${(p.includes||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul>
+ <div class="act"><a class="btn primary" href="ea.html?id=${encodeURIComponent(p.id)}">${+p.price_inr?'Buy '+money(p):'Get it free'}</a><button class="btn ghost" onclick="print()">Save as PDF</button>
+ ${eds.filter(x=>x.id!==p.id).map(x=>`<a class="btn ghost" href="brochure.html?id=${encodeURIComponent(x.id)}">${esc(x.name.split(' - ')[1]||x.name)} brochure</a>`).join('')}</div>
+ <p class="fine"><b>Risk disclosure.</b> ${esc(p.risk||'')} Trading CFDs and crypto carries a high risk of loss. This EA is software, not financial advice, and no profit is promised. Test on a demo account first. © RAW DIGITAL WORKS.</p>`;
+})();
+</script></body></html>
