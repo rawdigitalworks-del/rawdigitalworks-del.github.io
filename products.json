@@ -112,7 +112,9 @@
     "Run on a demo account first."
    ],
    "brochure": "brochure.html?id=rdw-ea-standard",
-   "status": "available"
+   "status": "available",
+   "mrp_inr": "999",
+   "offer": "Limited time offer"
   },
   {
    "version": "3.00",
@@ -169,7 +171,9 @@
     "Run on a demo account first."
    ],
    "brochure": "brochure.html?id=rdw-ea-unlimited",
-   "status": "available"
+   "status": "available",
+   "mrp_inr": "2999",
+   "offer": "Limited time offer"
   }
  ]
 }

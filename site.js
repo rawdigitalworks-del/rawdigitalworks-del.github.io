@@ -9,7 +9,7 @@ document.getElementById('foot').innerHTML=`<div class="wrap"><div class="fgrid">
 <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms &amp; licence</a><a href="refunds.html">Refund policy</a><a href="privacy.html">Privacy</a><a href="risk.html">Risk disclosure</a></div></div>
 <p class="risk"><b>Risk warning:</b> Trading forex, gold, oil and crypto CFDs carries a high level of risk and may not be suitable for everyone. You can lose some or all of your money. Expert Advisors are software tools, not financial advice. Backtest, out-of-sample and demo results are simulations and do not guarantee future results. Always test on a demo account first. © ${new Date().getFullYear()} RAW DIGITAL WORKS.</p></div>`;
 async function products(){try{const r=await fetch('products.json',{cache:'no-store'});return (await r.json()).products||[];}catch(e){return [];}}
-const money=p=>+p.price_inr?'₹'+esc(p.price_inr):'Free';
+const money=p=>+p.price_inr?(p.mrp_inr?'<s style="opacity:.55;font-weight:500;font-size:.75em">₹'+esc(p.mrp_inr)+'</s> ':'')+'₹'+esc(p.price_inr)+(p.offer?' <span class="tag gold" style="font-size:11px;vertical-align:middle">'+esc(p.offer)+'</span>':''):'Free';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function card(p){const live=p.status==='available';return `<article class="card product"><span class="status ${live?'live':'testing'}">${live?'Available':'In validation'}</span>
 <h3>${esc(p.name)} <small style="color:var(--muted);font-weight:500">v${esc(p.version)}</small></h3><p>${esc(p.summary)}</p>
