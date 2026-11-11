@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How we test — RAW DIGITAL WORKS</title><meta name="description" content="Our validation process for MT5 Expert Advisors."><link rel="stylesheet" href="site.css">
+<link rel="icon" href="logo-96.jpg"><meta property="og:image" content="logo.jpg"></head>
+<body><header class="top" id="top"></header><main>
+
+<section class="hero" style="padding-bottom:20px"><div class="wrap"><span class="eyebrow">Validation</span><h1>How we test every EA</h1><p class="lead">A strategy has to survive data it was never tuned on before we sell it.</p></div></section>
+<section style="padding-top:10px"><div class="wrap prose">
+<h2>1. A precise specification</h2><p>Exact indicators, entry and exit rules, stops, filters and risk per trade — specific enough that two developers would build the same EA.</p>
+<h2>2. Realistic backtests</h2><p>MetaTrader 5 Strategy Tester with real ticks or 1-minute OHLC data, the broker&#39;s spread, commission and swap, and an execution delay to model slippage.</p>
+<h2>3. Out-of-sample testing</h2><p>We keep a later period completely unseen during development and test on it separately. Big differences between in-sample and out-of-sample results mean the EA is rejected or reworked.</p>
+<h2>4. Robustness checks</h2><p>Nearby input values, other symbols and timeframes where relevant, minimum trade counts, drawdown and losing-streak analysis.</p>
+<h2>5. Demo forward testing</h2><p>Running on a demo account in real time before release.</p>
+<h2>6. Release review</h2><p>Legal and security checks, an installation guide, honest product claims and a final owner approval. Every published result states its type: <span class="tag gold">Backtest</span><span class="tag gold">Out-of-sample</span><span class="tag gold">Demo forward</span><span class="tag gold">Live</span></p>
+<div class="notice" style="margin-top:30px">Testing reduces risk but cannot remove it. Markets change, and results in the future can be worse than anything seen in testing.</div></div></section>
+</main><footer id="foot"></footer><script src="site.js"></script></body></html>
