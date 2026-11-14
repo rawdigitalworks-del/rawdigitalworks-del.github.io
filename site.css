@@ -58,3 +58,19 @@ footer h4{color:var(--text);margin:0 0 10px;font-size:14px}footer a{display:bloc
 .product ul{margin:4px 0 0;padding-left:20px;color:#c9d6db;font-size:14.5px}.product li{margin:3px 0}
 a.card{color:inherit;display:block}a.card:hover{text-decoration:none;border-color:rgba(246,190,40,.35)}
 .prose ol,.prose ul{padding-left:22px}.prose .card p{color:#c9d6db}
+
+/* ---- Store redesign (Nov 2026) ---- */
+.hero-sm{padding:64px 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:9px 18px;font:600 14.5px/1 inherit;cursor:pointer}
+.chip:hover{color:var(--text)}.chip.on{background:var(--gold);border-color:var(--gold);color:#121212}
+.cat{margin-bottom:46px}.cat:last-child{margin-bottom:0}.cat-head{margin-bottom:18px}.cat-head h2{margin:0 0 4px}
+.pc{display:flex;flex-direction:column;gap:2px}.pc .cover img{width:100%;height:auto;border-radius:10px;margin-bottom:14px}
+.pc h3{margin:8px 0 6px}.pc p{flex:1}
+.pc-foot{margin-top:16px;display:flex;flex-direction:column;gap:12px}.pc-btns{display:flex;flex-wrap:wrap;gap:8px}
+.pc-btns .btn{padding:10px 16px;font-size:14.5px}
+.cat-tile{display:flex;flex-direction:column;gap:2px;height:100%}.cat-tile .ico{font-size:30px;line-height:1.2}
+.cat-tile h3{margin:8px 0 6px}.cat-tile p{flex:1}.cat-tile .count{margin-top:14px;color:var(--gold);font-weight:600;font-size:14.5px}
+.steps .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#121212;font-weight:800}
+.note-line{margin-top:20px;color:var(--muted);font-size:14.5px}
+@media(max-width:900px){.g4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.g4{grid-template-columns:1fr}}
