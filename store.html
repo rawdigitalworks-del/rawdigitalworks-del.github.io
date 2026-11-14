@@ -1,0 +1,27 @@
+<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Store — Career kits, e-books and Telugu packs | Raw Digital Works</title><meta name="description" content="All Raw Digital Works products in one place: career kits, e-books, Telugu home-business packs and free downloads. UPI, cards and net banking via Razorpay."><meta name="robots" content="index,follow"><link rel="canonical" href="https://rawdigitalworks-del.github.io/store.html">
+<meta name="theme-color" content="#07090b"><link rel="stylesheet" href="site.css"><link rel="icon" href="logo-96.jpg"><link rel="apple-touch-icon" href="logo-96.jpg"></head>
+<body><header class="top" id="top"></header><main>
+<section class="hero hero-sm"><div class="wrap"><span class="eyebrow">Store</span><h1>Everything in one place — <em>pick a category.</em></h1>
+<p class="lead">Career kits, short e-books, Telugu packs for home businesses and free downloads. Pay with UPI, cards or net banking through Razorpay.</p>
+<div class="chips" id="chips" role="tablist" aria-label="Product categories"></div></div></section>
+<section class="alt"><div class="wrap" id="store"></div></section>
+<section><div class="wrap"><h2>How buying works</h2><div class="grid g3 steps">
+<div class="card"><span class="num">1</span><h3>Pick &amp; pay</h3><p>Click Buy now and pay on Razorpay's secure page.</p></div>
+<div class="card"><span class="num">2</span><h3>Get your files</h3><p>The download is sent to the email or WhatsApp number you gave at checkout. Check Spam if it is late.</p></div>
+<div class="card"><span class="num">3</span><h3>Need help?</h3><p>Email us with your payment ID. See the <a href="refunds.html">refund policy</a>.</p></div></div>
+<p class="note-line">Looking for MetaTrader trading tools? They are listed separately for international buyers: <a href="eas.html">Trading tools</a>.</p></div></section>
+</main><footer id="foot"></footer><script src="site.js"></script><script src="catalog.js"></script>
+<script>
+(function(){
+ const box=document.getElementById('store'),chips=document.getElementById('chips');
+ const want=(location.hash||'').slice(1);let cur=CATS.some(c=>c.id===want)?want:'all';
+ function draw(){
+  chips.innerHTML=[{id:'all',name:'All'}].concat(CATS).map(c=>`<button class="chip ${c.id===cur?'on':''}" data-id="${c.id}">${_e(c.name)}</button>`).join('');
+  const groups=cur==='all'?CATS:CATS.filter(c=>c.id===cur);
+  box.innerHTML=groups.map(c=>{const items=PRODUCTS.filter(p=>p.cat===c.id);return `<div class="cat" id="${c.id}"><div class="cat-head"><h2>${c.icon} ${_e(c.name)}</h2><p class="sub">${_e(c.blurb)}</p></div><div class="grid g3">${items.map(pcard).join('')}</div></div>`}).join('');
+ }
+ chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;cur=b.dataset.id;try{history.replaceState(null,'',cur==='all'?'store.html':'#'+cur)}catch(_){}draw();});
+ draw();
+})();
+</script></body></html>
