@@ -8,9 +8,8 @@
 <body><header class="top" id="top"></header><main>
 <section class="hero"><div class="wrap"><span class="eyebrow">Contact</span><h1>Talk to us</h1><p class="lead">Questions about a kit, delivery or your purchase — we reply within 24 hours.</p>
 <form class="contact" id="cf"><input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email" required>
-<select name="topic"><option>Career Pack — delivery or download</option><option>Question about a product</option><option>Trading tools (international)</option><option>Other</option></select>
+<select name="topic"><option>Career Pack — delivery or download</option><option>Question about a product</option><option>Other</option></select>
 <textarea name="msg" rows="5" placeholder="Message (include your Razorpay payment ID for orders)" required></textarea><button class="btn primary" type="submit">Send message</button></form>
 <p class="sub" style="margin-top:14px;font-size:14px">Or email <a href="mailto:rawdigitalworks@gmail.com">rawdigitalworks@gmail.com</a>.</p></div></section></main><footer id="foot"></footer><script src="site.js"></script><script src="config.js"></script><script>
-const q=new URLSearchParams(location.search).get("ea");if(q){document.querySelector("[name=msg]").value="About: "+q+"\n";}
 document.getElementById("cf").onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);const to=window.RDW_CONTACT_EMAIL||"rawdigitalworks@gmail.com";
 location.href="mailto:"+to+"?subject="+encodeURIComponent("[RDW] "+f.get("topic")+" — "+f.get("name"))+"&body="+encodeURIComponent(f.get("msg")+"\n\nFrom: "+f.get("name")+" <"+f.get("email")+">");};</script></body></html>

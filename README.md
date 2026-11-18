@@ -1,3 +1,3 @@
-# RAW DIGITAL WORKS website
+# Raw Digital Works website
 
-Static site for MT5 Expert Advisors. Products are listed in products.json.
+Static GitHub Pages site for Raw Digital Works career kits and e-books. Store items are listed in catalog.js.
