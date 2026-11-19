@@ -1,0 +1,20 @@
+<!doctype html><html lang="en-IN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Share your review — Raw Digital Works</title><meta name="description" content="Bought from Raw Digital Works? Tell us in one line if it was useful."><meta name="robots" content="noindex"><link rel="canonical" href="https://rawdigitalworks-del.github.io/review.html">
+<meta name="theme-color" content="#07090b"><link rel="stylesheet" href="site.css"><link rel="icon" href="logo-96.jpg"></head>
+<body><header class="top" id="top"></header><main>
+<section class="hero"><div class="wrap prose"><span class="eyebrow">1 minute</span><h1>Was it useful?</h1>
+<p class="lead">Tell us honestly in one line. Good or bad, it helps us improve, and helps the next buyer decide.</p>
+<div class="leadbox"><form id="rv">
+<p><label>Which product?<br><select name="p" required style="width:100%;padding:11px;border-radius:12px;background:#0b0f12;color:var(--text);border:1px solid var(--line)"><option>RDW Career Pack</option><option>21-Day AI Job Kit</option><option>Get Shortlisted</option><option>AI-Proof Your Career</option><option>Safe Side Income with AI</option><option>All 3 e-books bundle</option><option>Home Baker Pack</option></select></label></p>
+<p><label>Was it useful? (one line)<br><textarea name="t" required maxlength="280" rows="3" style="width:100%;padding:11px;border-radius:12px;background:#0b0f12;color:var(--text);border:1px solid var(--line);font:inherit"></textarea></label></p>
+<p><label>Name or initials + city (e.g. S.K., Nellore)<br><input name="n" required maxlength="40" style="width:100%;padding:11px;border-radius:12px;background:#0b0f12;color:var(--text);border:1px solid var(--line);font:inherit"></label></p>
+<p><label><input type="checkbox" name="ok"> Yes, you can show this review (with my initials) on the website.</label></p>
+<button class="btn primary">Send review on WhatsApp</button></form>
+<p id="gf" hidden><a class="btn primary" id="gfl" href="#" target="_blank" rel="noopener">Open the review form</a></p></div>
+</div></section></main><footer id="foot"></footer><script src="site.js"></script>
+<script>
+if(window.RDW_REVIEW_FORM_URL){rv.hidden=true;gf.hidden=false;gfl.href=RDW_REVIEW_FORM_URL;}
+rv.onsubmit=e=>{e.preventDefault();const f=new FormData(rv);
+const m=`Review for ${f.get('p')}:\n"${f.get('t')}"\n- ${f.get('n')}\nOK to show on website: ${f.get('ok')?'YES':'NO'}`;
+location.href='https://wa.me/917995115661?text='+encodeURIComponent(m);};
+</script></body></html>

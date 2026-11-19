@@ -63,3 +63,18 @@ a.card{color:inherit;display:block}a.card:hover{text-decoration:none;border-colo
 .trust .grid{gap:18px}.trust .t{display:flex;gap:12px;align-items:flex-start}.trust .t b{display:block;color:var(--text);font-size:15px}.trust .t span{color:var(--muted);font-size:14px;line-height:1.5}.trust .ic{font-size:22px;line-height:1}
 @media(min-width:700px){.trust .grid{grid-template-columns:repeat(4,1fr)}}
 .peek{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.peek img{width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;object-position:top}.peek figcaption{padding:12px 16px;font-size:14px;color:var(--muted)}
+/* conversion */
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(11,15,18,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(246,190,40,.35)}
+.bb{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.bb-t{display:flex;flex-direction:column;line-height:1.25;min-width:0}.bb-t b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bb-t small{color:var(--muted);font-size:12.5px}
+.bb .btn{flex:none;padding:11px 18px}
+body.has-buybar{padding-bottom:76px}
+@media(min-width:900px){.buybar{top:66px;bottom:auto;border-top:0;border-bottom:1px solid rgba(246,190,40,.35)}body.has-buybar{padding-bottom:0}body.has-buybar main{padding-top:62px}}
+.leadbox{border:1px solid rgba(246,190,40,.35);border-radius:var(--radius);padding:24px;background:var(--panel);max-width:620px}
+.leadbox.inline{margin:0 auto}.leadbox h3{margin:0 0 6px}.leadbox p{color:var(--muted);margin:0 0 14px}
+.lead-f{display:flex;gap:10px;flex-wrap:wrap}.lead-f input[type=email]{flex:1 1 220px;padding:12px 16px;border-radius:999px;border:1px solid var(--line);background:#0b0f12;color:var(--text);font:inherit}
+.leadbox .tiny{font-size:12.5px;margin:10px 0 0}.lead-ok{color:var(--text)!important}
+.pop{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}
+.pop-in{position:relative;width:100%;max-width:520px}.pop-in .leadbox{max-width:none}
+.pop-x{position:absolute;top:8px;right:12px;background:none;border:0;color:var(--muted);font-size:26px;cursor:pointer;z-index:1}
+[hidden]{display:none!important}
