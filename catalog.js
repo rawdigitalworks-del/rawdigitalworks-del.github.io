@@ -19,7 +19,7 @@ const PRODUCTS=[
 ];
 const _e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function pcard(p){const price=p.price?'₹'+p.price:'Free';
- const cover=p.img?`<a class="cover" href="${p.url}"><img src="${p.img}" alt="${_e(p.name)} cover" loading="lazy" width="1122" height="1402"></a>`:'';
+ const cover=p.img?`<a class="cover" href="${p.url}"><img src="${p.img}" alt="${_e(p.name)} cover" loading="lazy" width="1122" height="1402" style="width:100%;height:auto;border-radius:10px"></a>`:'';
  const buy=p.buy?`<a class="btn primary" href="${p.buy}" rel="noopener">Buy now - ${price}</a>`:(p.price?`<a class="btn primary" href="${p.url}">See bundle - ${price}</a>`:`<a class="btn primary" href="${p.url}">Get it free</a>`);
  const more=(p.buy||!p.price)?`<a class="btn ghost" href="${p.url}">${p.price?"What's inside":'Details'}</a>`:'';
  return `<article class="card product pc" data-cat="${p.cat}">${cover}<span class="status ${p.price?'live':'testing'}">${_e(p.tag)}</span><h3>${_e(p.name)}</h3><p>${_e(p.desc)}</p><div class="pc-foot"><div class="price">${price}</div><div class="pc-btns">${buy} ${more}</div></div></article>`;}
