@@ -12,6 +12,8 @@ const PRODUCTS=[
  {id:'safe-side',cat:'ebooks',name:'Safe Side Income with AI',tag:'Launch price',price:149,desc:'Find your first paying client in 30 days, without scams.',url:'ebook-safe-side-income-ai.html',buy:'https://rzp.io/rzp/rdw-safe-side-income',img:'ebook-safe-side-income-ai-v2.png'},
  {id:'bundle',cat:'ebooks',name:'All 3 e-books bundle',tag:'Save ₹28',price:249,desc:'Get Shortlisted + AI-Proof Your Career + Safe Side Income with AI.',url:'ebooks.html'},
  {id:'home-baker',cat:'telugu',name:'Home Baker Pack',tag:'New · Telugu',price:149,desc:'30 designed Telugu posts with captions and a Post Maker tool for home bakers.',url:'home-baker-pack.html',buy:'https://rzp.io/rzp/rdw-home-baker-pack'},
+ {id:'ayyappa-planner',cat:'telugu',name:'Ayyappa Deeksha 41-Day Planner',tag:'New · Telugu',price:99,desc:'41-day deeksha planner in Telugu with Tenglish below every line, plus a mobile tick-list.',url:'ayyappa-deeksha-planner.html',buy:'https://rzp.io/rzp/a7S07u2X'},
+ {id:'ayyappa-saranam',cat:'telugu',name:'Ayyappa Saranaghosha 108 (add-on)',tag:'New · Telugu',price:49,desc:'The 108 Saranaghosha in Telugu + Tenglish, PDF and mobile tick-list.',url:'ayyappa-saranaghosha-108.html',buy:'https://rzp.io/rzp/TE2gbZN'},
  {id:'starter-kit',cat:'free',name:'Career Starter Kit',tag:'Free',price:0,desc:'Fresher ATS resume template (.docx) + 10 AI prompts for job hunting.',url:'free-resume-template.html'},
  {id:'g-ats',cat:'free',name:'ATS resume format for freshers',tag:'Free guide',price:0,desc:'What recruiter software can and cannot read.',url:'ats-resume-format.html'},
  {id:'g-intro',cat:'free',name:'"Tell me about yourself"',tag:'Free guide',price:0,desc:'A simple answer structure with examples.',url:'tell-me-about-yourself.html'},
