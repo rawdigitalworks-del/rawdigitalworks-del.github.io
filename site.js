@@ -25,7 +25,7 @@ if(d.buy){
   const q=[...document.querySelectorAll('h2')].find(h=>h.textContent.trim()==='Questions');const at=q?q.closest('section'):document.querySelector('main').lastElementChild;at.parentNode.insertBefore(sec,at);};
  document.head.appendChild(s);
 }
-if(/free-resume-template|thanks|review/.test(here))return;
+if(d.nolead||/free-resume-template|thanks|review/.test(here))return;
 const URL_=window.RDW_BREVO_FORM_URL||'';
 const formHTML=URL_?`<form class="lead-f"><input type="email" name="EMAIL" required placeholder="Your email" autocomplete="email"><input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" style="display:none"><input type="hidden" name="locale" value="en"><button class="btn primary">Send me the template</button></form><p class="tiny">Free. One email with the template, then occasional job tips. Unsubscribe anytime.</p>`:`<a class="btn primary" href="free-resume-template.html">Get the free template</a>`;
 const box=c=>`<div class="leadbox ${c}"><h3>Free ATS resume template</h3><p>One-column Word resume that recruiter software can read, plus 10 AI job prompts.</p>${formHTML}<p class="lead-ok" hidden>Done ✔ <a href="RDW_Career_Starter_Kit_FREE.zip" download>Download your template now</a>.</p></div>`;
