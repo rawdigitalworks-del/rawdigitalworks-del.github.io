@@ -7,12 +7,11 @@ const CATS=[
  {id:'free',name:'Free downloads',blurb:'Start free: resume template and interview guides.',icon:'🎁'}
 ];
 const PRODUCTS=[
- {id:'21-day-kit',cat:'ebooks',name:'The 21-Day AI Job Kit',tag:'New',price:199,desc:'A practical daily plan to improve your resume, build proof and practise interviews with AI.',url:'ebook-21-day-ai-job-kit.html',buy:'https://rzp.io/rzp/PyAiZj0',img:'ebook-21-day-ai-job-kit.jpg'},
  {id:'career-pack',cat:'careers',name:'RDW Career Pack',tag:'Most popular',price:299,desc:'3 ATS resume templates, 3 cover letters, LinkedIn guide, 200 interview answers and 10 AI prompts.',url:'career-pack.html',buy:'https://rzp.io/rzp/rdw-career-pack',img:'career-pack-cover-v2.png'},
  {id:'get-shortlisted',cat:'ebooks',name:'Get Shortlisted',tag:'Launch price',price:99,desc:'The 30-day interview-call plan for Indian freshers.',url:'ebook-get-shortlisted.html',buy:'https://rzp.io/rzp/rdw-get-shortlisted',img:'ebook-get-shortlisted-v2.png'},
  {id:'ai-proof',cat:'ebooks',name:'AI-Proof Your Career',tag:'Launch price',price:129,desc:'A 21-day ChatGPT skills plan for jobs in India.',url:'ebook-ai-proof-career.html',buy:'https://rzp.io/rzp/rdw-ai-proof-career',img:'ebook-ai-proof-career-v2.png'},
  {id:'safe-side',cat:'ebooks',name:'Safe Side Income with AI',tag:'Launch price',price:149,desc:'Find your first paying client in 30 days, without scams.',url:'ebook-safe-side-income-ai.html',buy:'https://rzp.io/rzp/rdw-safe-side-income',img:'ebook-safe-side-income-ai-v2.png'},
- {id:'bundle',cat:'ebooks',name:'All 3 e-books bundle',tag:'Save ₹128',price:249,desc:'Get Shortlisted + AI-Proof Your Career + Safe Side Income with AI.',url:'ebooks.html'},
+ {id:'bundle',cat:'ebooks',name:'All 3 e-books bundle',tag:'Save ₹28',price:249,desc:'Get Shortlisted + AI-Proof Your Career + Safe Side Income with AI.',url:'ebooks.html'},
  {id:'home-baker',cat:'telugu',name:'Home Baker Pack',tag:'New · Telugu',price:149,desc:'30 designed Telugu posts with captions and a Post Maker tool for home bakers.',url:'home-baker-pack.html',buy:'https://rzp.io/rzp/rdw-home-baker-pack'},
  {id:'ayyappa-planner',cat:'devotional',name:'Ayyappa Deeksha 41-Day Planner',tag:'New · Telugu',price:99,desc:'41-day deeksha planner in Telugu with Tenglish below every line, plus a mobile tick-list.',url:'ayyappa-deeksha-planner.html',buy:'https://rzp.io/rzp/a7S07u2X',img:'ayyappa-planner-cover.jpg'},
  {id:'ayyappa-saranam',cat:'devotional',name:'Ayyappa Saranaghosha 108 (add-on)',tag:'New · Telugu',price:49,desc:'The 108 Saranaghosha in Telugu + Tenglish, PDF and mobile tick-list.',url:'ayyappa-saranaghosha-108.html',buy:'https://rzp.io/rzp/TE2gbZN',img:'ayyappa-saranam-cover.jpg'},
@@ -23,7 +22,7 @@ const PRODUCTS=[
 ];
 const _e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function pcard(p){const price=p.price?'₹'+p.price:'Free';
- const cover=p.img?`<a class="cover rdw-preview" href="${p.url}"><img src="${p.img}" alt="${_e(p.name)} cover" loading="lazy" width="1122" height="1402" style="width:100%;height:auto;border-radius:10px"><img class="rdw-watermark" src="logo-rdw-nav.png" alt="" aria-hidden="true"></a>`:'';
+ const cover=p.img?`<a class="cover" href="${p.url}"><img src="${p.img}" alt="${_e(p.name)} cover" loading="lazy" width="1122" height="1402" style="width:100%;height:auto;border-radius:10px"></a>`:'';
  const buy=p.buy?`<a class="btn primary" href="${p.buy}" rel="noopener">Buy now - ${price}</a>`:(p.price?`<a class="btn primary" href="${p.url}">See bundle - ${price}</a>`:`<a class="btn primary" href="${p.url}">Get it free</a>`);
  const more=(p.buy||!p.price)?`<a class="btn ghost" href="${p.url}">${p.price?"What's inside":'Details'}</a>`:'';
  return `<article class="card product pc" data-cat="${p.cat}">${cover}<span class="status ${p.price?'live':'testing'}">${_e(p.tag)}</span><h3>${_e(p.name)}</h3><p>${_e(p.desc)}</p><div class="pc-foot"><div class="price">${price}</div><div class="pc-btns">${buy} ${more}</div></div></article>`;}

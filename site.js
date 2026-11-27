@@ -3,13 +3,13 @@ window.RDW_BREVO_FORM_URL="https://3f563a23.sibforms.com/serve/MUIFAN9rN9_JKhdSI
 /* Google Form link for reviews. Empty = review.html sends the review on WhatsApp. */
 window.RDW_REVIEW_FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSca4xlqouJVqSxdMhO4znGBKT5ku2yRyrDBTWsJVJga-dzSCg/viewform";
 /* Shared header/footer and mobile menu. */
-const PAGES=[['index.html','Home'],['store.html','Store'],['designs.html','Designs'],['career-pack.html','Career Pack'],['ebooks.html','E-books'],['free-resume-template.html','Free Template'],['guides.html','Guides'],['about.html','About'],['contact.html','Contact']];
+const PAGES=[['index.html','Home'],['index.html#shop','Store'],['career-pack.html','Career Pack'],['ebooks.html','E-books'],['free-resume-template.html','Free Template'],['guides.html','Guides'],['about.html','About'],['contact.html','Contact']];
 const here=location.pathname.split('/').pop()||'index.html';
 document.getElementById('top').innerHTML=`<div class="wrap nav"><a class="brand" href="index.html"><img src="logo-rdw-nav.png" alt="Raw Digital Works logo" width="95" height="38">RAW DIGITAL WORKS</a>
 <button class="menu" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
 <nav class="links">${PAGES.map(([h,t])=>`<a href="${h}" class="${h===here?'on':''}">${t}</a>`).join('')}<a class="btn primary" href="free-resume-template.html">Free resume template</a></nav></div>`;
-document.getElementById('foot').innerHTML=`<div class="wrap"><div class="fgrid"><div><a class="brand" href="index.html"><img src="logo-rdw-nav.png" alt="Raw Digital Works logo" width="95" height="38">RAW DIGITAL WORKS</a><p>Digital products made in Nellore, India: career kits, e-books, Telugu packs and a gallery of 1,000 designs.</p></div>
-<div><h4>Kits &amp; guides</h4><a href="designs.html">Design gallery</a><a href="posters.html">Posters</a><a href="career-pack.html">RDW Career Pack (₹299)</a><a href="ebooks.html">E-books (from ₹99)</a><a href="free-resume-template.html">Free resume template</a><a href="ats-resume-format.html">ATS resume format</a><a href="tell-me-about-yourself.html">Tell me about yourself</a><a href="hr-interview-questions.html">HR interview questions</a></div>
+document.getElementById('foot').innerHTML=`<div class="wrap"><div class="fgrid"><div><a class="brand" href="index.html"><img src="logo-rdw-nav.png" alt="Raw Digital Works logo" width="95" height="38">RAW DIGITAL WORKS</a><p>Simple digital products made in Nellore, India: career kits today; e-books, AI money guides, automation tools and AI courses coming soon.</p></div>
+<div><h4>Kits &amp; guides</h4><a href="career-pack.html">RDW Career Pack (₹299)</a><a href="ebooks.html">E-books (from ₹99)</a><a href="free-resume-template.html">Free resume template</a><a href="ats-resume-format.html">ATS resume format</a><a href="tell-me-about-yourself.html">Tell me about yourself</a><a href="hr-interview-questions.html">HR interview questions</a></div>
 <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a><a href="terms.html">Terms &amp; licence</a><a href="refunds.html">Refund policy</a><a href="privacy.html">Privacy</a></div>
 <div><h4>Follow us</h4><a href="https://www.youtube.com/channel/UC-OIkKJ0WOBZ15-MAjQibIQ" target="_blank" rel="noopener">YouTube (Adventure Ajay)</a><a href="https://www.instagram.com/rawdigitalworks" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/102378375642953" target="_blank" rel="noopener">Facebook</a></div></div>
 <p class=\"risk\">We help you prepare; hiring decisions are made by employers. We do not guarantee interviews or jobs. © ${new Date().getFullYear()} RAW DIGITAL WORKS.</p></div>`;
@@ -38,6 +38,3 @@ let shown=false;function pop(){if(shown)return;shown=true;ls.set('rdw_pop',Date.
 if(matchMedia('(hover:hover) and (min-width:900px)').matches)document.addEventListener('mouseout',e=>{if(!e.relatedTarget&&e.clientY<=0)pop();});
 else addEventListener('scroll',()=>{if(scrollY>(document.body.scrollHeight-innerHeight)*.6)pop();},{passive:true});
 })();
-
-/* Original RDW logo on product previews, without altering source cover files. */
-document.querySelectorAll('main img').forEach(img=>{if(!/cover|e-book/i.test(img.alt)||img.closest('.rdw-preview'))return;const wrap=document.createElement('span');wrap.className='rdw-preview';img.before(wrap);wrap.appendChild(img);const mark=document.createElement('img');mark.src='logo-rdw-nav.png';mark.alt='';mark.className='rdw-watermark';mark.setAttribute('aria-hidden','true');wrap.appendChild(mark);});
